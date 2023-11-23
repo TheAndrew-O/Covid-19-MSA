@@ -1,0 +1,4 @@
+scikit-bio
+biopython
+newick
+numpy
