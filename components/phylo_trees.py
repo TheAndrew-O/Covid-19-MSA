@@ -9,7 +9,7 @@ import sys
 import csv
 
 def main():
-    with open("/home/andrew/5481/5481_proj/sequences/covid_spikes_msa_muscle_clustal.aln", "r") as fp:
+    with open("n1.clw", "r") as fp:
         align = AlignIO.read(fp,"clustal")
     
     #align = AlignIO.read("/home/andrew/5481/5481_proj/sequences/msa.fna", "fasta")
@@ -19,8 +19,9 @@ def main():
     #print(dm)
     
     constructor = DistanceTreeConstructor()
-    tree = constructor.nj(dm)
-    Phylo.write(tree, 'tree_spike.txt', 'newick')
+    #tree = constructor.nj(dm)
+    tree = constructor.upgma(dm)
+    Phylo.write(tree, 'tree_spikeUPGMA_Nucleo.txt', 'newick')
 
     fig = plt.figure(dpi=100)
     axes = fig.add_subplot(1,1,1)

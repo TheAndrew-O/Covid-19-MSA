@@ -10,7 +10,7 @@ def extract_surface_glycoprotein_sequences(input_file, output_file):
                 SeqIO.write(record, out_handle, 'fasta')
 
 # Replace 'input.fasta' with the actual name of your FASTA file
-input_file = 'covid_gen.fasta'
+input_file = 'sequences (1).fasta'
 
 # Replace 'covid_nucleocapsid .fna' with the desired name for the output file
 output_file = 'covid_nucleocapsid.fna'
